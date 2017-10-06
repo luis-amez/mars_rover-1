@@ -54,8 +54,8 @@ for (var i = 0; i < orders.length; i++) {
   /**
    * Here we check, if the Rover is moving to a position more than 9 or less than 0, to make the grid espherical.
    */
-  check (Myrover.position,'x'); 
-  check (Myrover.position,'y');
+  myRover.position.x = check (Myrover.position.x); 
+  myRover.position.y = check (Myrover.position.x);
   
   /**
    * We check using an "if" , if the next position of the rover is the same as the obstacule created. If it's the same position
@@ -78,11 +78,11 @@ for (var i = 0; i < orders.length; i++) {
 /**
  * Create the function "check". Will check the values of the position to do the Rover move in spheral grid.
  */ 
-function check(actualposition,value){
-  if(actualposition[value] > 9)
-    actualposition[value] = 0;
-  else if(actualposition[value] < 0)
-    actualposition[value] = 9;
+function check(actualposition){
+  if(actualposition > 9)
+    return 0 ;
+  else if(actualposition < 0)
+    return 9;
 }
 
 /**
