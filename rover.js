@@ -52,7 +52,7 @@ for (var i = 0; i < orders.length; i++) {
   move(orders[i])
 
   /**
-   * Here we check, if the Rover is moving to a position more than 
+   * Here we check, if the Rover is moving to a position more than 9 or less than 0, to make the grid espherical.
    */
   check (Myrover.position,'x'); 
   check (Myrover.position,'y');
